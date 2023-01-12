@@ -1,0 +1,50 @@
+1_twoSum
+13_romanToInteger **
+26_removeDuplicatesFromSortedArray **
+27_removeElement **
+58_lengthOfLastWord
+66_plusOne
+67_addBinary **
+70_climbingStairs
+83_removeDuplicatesFromSortedList **
+121_bestTimeToBuyAndSellStock
+100_sameTree
+141_linkedListCycle
+101_symmetricTree **
+104_maximumDepthOfBinaryTree
+108_convertSortedArrayToBinarySearchTree **
+110_balancedBinaryTree **
+111_minimumDepthOfBinaryTree **
+118_pascalsTriangle
+160_intersectionOfTwoLinkedList ** Try to do it in O(1) memory!
+171_excelSheetColumnNumber ** A good exercise would be to do the reverse too!
+190_reverseBits
+203_removeLinkedListElements **
+206_reverseLinkedList **
+219_containsDuplicatesII **
+234_palindromeLinkedList ** The O(N), O(N) solution is good, but the O(N), O(1) solution is also cool!
+242_validAnagram
+257_validTreePaths **
+258_addDigits
+263_uglyNumber ** This one uses the Sieve of Eratosthenes, which is a great building block. There are two ways to do it -- One with a list+set, the otehr with a list of booleans. There are optimizations around i**2, or not checking evens, or ...
+268_missingNumber ** A good chance to practice merge sort again
+290_wordPattern ** No trick here -- just think about the information that you need to keep track of and the strucutre it should be in, and then enumerate the possibilities at each step of processing! I prefer my second soln
+283_moveZeroes ** This one is just hard, to me! :) Practice it!
+292_nimGame ** Cool!
+338_countingBits ** Being able to convert decimal -> binary is important. The reverse is easier
+349_intersectionOfTwoArrays ** Do the question and the followup. Nice and easy.
+461_hammingDistance ** Another chance to practice either +Int -> Binary or do Bitwise XOR
+403_islandPerimeter ** A great one!
+492_constructTheRectangle ** The second solution is the one to think about. Think: What's the relationship between L and W? If L and W are maximally close, what's the highest L could be?
+496_nextGreaterElement ** This one is great, a super good exercise in thinking about getting to O(N) by using a stack.
+561_arrayPartition
+543_diameterOfBinaryTree ** This is actually a little tricky -- Realize that the maximum diameter need not go through the root! And define the equation for diameter at a node
+637_averageLevelsInBinaryTree
+733_floodFill ** A classic
+617_mergeTwoBinaryTrees **
+
+Annoying Ones:
+136_singleNumber --> Stupid XOR bitwise trick...
+169_majorityElement --> Another annoying bit manipulation one
+202_happyNumber --> The solution is simple, but not obvious to be that it would ever terminate...
+231_powerOfTwo --> Bitwise AND solution.

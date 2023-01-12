@@ -1,0 +1,47 @@
+3_longestSubstringWithoutRepeatingCharacters
+5_longestPalindromicSubstring
+11_containerWithMostWater
+15_3Sum
+33_searchInRotatedSortedArray
+34_findFirstAndLastPositionOfElementInSortedArray
+36_validSudoku
+38_countAndSay
+48_rotateImage*
+53_maximumSubarray
+54_spiralMatrix*
+55_jumpGame
+98_validateBinarySearchTree
+102_binaryTreeLevelOrderTraversal
+103_binaryTreeZigzagLeveLOrderTraversal
+116_populatingNextRightPointersInEachNode
+122_bestTimeToBuyAndSellStockII
+128_longestConsecutiveSequence *
+130_surroundedRegions * <- I actually love this one and would ask it on interviews
+139_wordBreak <- Love this one :)
+146_lruCache Love it
+148_sortList *
+150_evaluateReversePolishNotations <- I like this one too and would ask on an interview
+152_maximumProductSubarray
+155_minStack <- This one is just a pretty easy one to know.
+189_rotateArray <- This one has a terrible solution
+198_houseRobber
+210_courseSchedule II **
+236_lowestCommonAncestorOfABinaryTree -->
+
+---
+28_findTheIndexOfTheFirstOccurrenceInAString
+This one assumes that you know or are able to invent in 30 minutes the
+Knuth Morris Pratt (KMP) string search algorithm. I'm not currently taking the
+time to learn that, and I'm not sure that it's a good question.
+
+29_divideTwoIntegers
+This one is annoying and dumb.
+
+105_constructBinaryTreeFromPreorderAndInorderTraversal
+This one is hard. And I don't like it.
+
+134_gasStation
+This one is a "greedy" problem that isn't obvious. I don't like it and don't htink it' a good test.
+
+138_copyListWithRandomPointer
+This one is just too long/difficult to test for me to try right now. Maybe come back to it!
