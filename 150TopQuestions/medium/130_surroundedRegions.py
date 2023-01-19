@@ -98,8 +98,17 @@ def test(fn):
     1) It is on the border
     2) It is adjacent to an 0 that should not be flipped
     """
-    assert fn([["X", "X", "X", "X"], ["X", "O", "O", "X"], ["X", "X", "O", "X"], ["X", "O", "X", "X"]]) == [
-        ["X", "X", "X", "X"], ["X", "X", "X", "X"], ["X", "X", "X", "X"], ["X", "O", "X", "X"]]
+    assert fn(
+        [["X", "X", "X", "X"],
+         ["X", "O", "O", "X"],
+         ["X", "X", "O", "X"],
+         ["X", "O", "X", "X"]
+         ]) == [
+        ["X", "X", "X", "X"],
+        ["X", "X", "X", "X"],
+        ["X", "X", "X", "X"],
+        ["X", "O", "X", "X"]
+        ]
     assert fn([["X"]]) == [["X"]]
 
 test(surrounded_regions)
