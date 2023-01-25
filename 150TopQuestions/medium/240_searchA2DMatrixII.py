@@ -206,7 +206,7 @@ R   1   4   7  (11) _
     10  13  14  17  _  
     18  21  23  26  _       target: 5 
 
-Consider the matrix[r][c] value, 11
+Consider the matrix[r][c] value, 11d
 What can we say about this value?
 * Because 11 > 5, we know that 5 will not be contained in the current column, which only contains values >= 11
     -> Therefore we'll next consider the column to the left. 
