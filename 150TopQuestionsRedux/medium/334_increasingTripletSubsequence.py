@@ -98,11 +98,6 @@ Consider how this works for:
 """
 
 
-"""
-WARNING - ERROR
-This doesn't work for the case [7,5,3,6], erroneously returning True when the answer should be false
-
-"""
 def increasingTriplet(nums: list[int]) -> bool:
     if len(nums) < 3:
         return False  # Can't make a triplet!
@@ -112,24 +107,25 @@ def increasingTriplet(nums: list[int]) -> bool:
 
     for i in range(len(nums)):
         num = nums[i]
-        if num <= smallest:  # Doesn't seem like we need
-            secondSmallest = smallest
+        if num <= smallest:  # Doesn't seem like we need the =
             smallest = num
         elif num <= secondSmallest:
             secondSmallest = num
         else:
             return True
-        print(f"{i = } {smallest},{secondSmallest}")
+        print(f"{i = } | {smallest},{secondSmallest}")
     return False
 
 
 def test(fn):
-    # assert fn([4, 5, 3, 2]) == False
+    assert fn([7,2,6,4,5,1,6]) == True
+    assert fn([7, 5, 6]) == False
+    assert fn([4, 5, 3, 2]) == False
     assert fn([7, 5, 3, 6]) == False
-    # assert fn([1, 2, 3, 4]) == True
-    # assert fn([1, 2, 3, 4, 5]) == True
-    # assert fn([5, 4, 3, 2, 1]) == False
-    # assert fn([2, 1, 5, 0, 4, 6]) == True
+    assert fn([1, 2, 3, 4]) == True
+    assert fn([1, 2, 3, 4, 5]) == True
+    assert fn([5, 4, 3, 2, 1]) == False
+    assert fn([2, 1, 5, 0, 4, 6]) == True
 
 
 # test(increasingTripletNaive)
