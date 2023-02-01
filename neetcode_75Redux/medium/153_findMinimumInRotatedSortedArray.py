@@ -65,20 +65,27 @@ def find_min(nums: list[int]) -> int:
     l, r = 0, len(nums)-1
 
     while l <= r:
+        # check to see if there's no rotation at all
+        if nums[l] < nums[r]:
+            return nums[l]  # No rotation; first element is min
+
         print(f"{l =}{r =}")
         mid_idx = l + (r-l)//2
-        mid_v = nums[mid_idx]
+        mid_val = nums[mid_idx]
 
+        """"
+        Future Sam: I don't actually think this is right? What if the mid_idx were the rotation point? Would we find it? 
+        Adding a test case.
+        """
         # Is there a discontinuity on the left? On the right? If there isn't one, it must be the leftmost element!
-        if mid_v < nums[l]:
+        if mid_val < nums[mid_idx-1]  and mid_val < nums[mid_idx+1]:
+            return mid_val
+        elif mid_val < nums[l]:
             # Discontinuity on the left; look left
             r = mid_idx - 1
-        elif mid_v > nums[r]:
+        else: # mid_val > nums[r]
             # Discontinuity on the right; look right
             l = mid_idx + 1
-        else:
-            # No Discontinuity; nums[l:r+1] must be in strictly ASC, meaning that l must be the minimum
-            return nums[l]
 
     return nums[l]
 
@@ -86,5 +93,6 @@ def test(fn):
     assert fn([3,4,5,1,2]) == 1
     assert fn([4,5,6,7,0,1,2]) == 0
     assert fn([11,13,15,17]) == 11
+    assert fn([10,11,7,8,9]) == 7 # This was returning 10, which is incorrect.
 
 test(find_min)
