@@ -160,9 +160,10 @@ def test(fn: Callable):
     assert fn("applepenapple", ["apple", "pen"])
     assert fn("catsandog", ["cats", "dog", "sand", "and", "cat"]) == False
     assert fn("neetcode", ["neet", "leet", "code"])
+    assert fn("abc", ["c", "bc", "a"])
 
 
 # test(word_break)
 # test(word_break_2)
 # test(neetcode_1)
-# test(neetcode_2)
+test(neetcode_2)
