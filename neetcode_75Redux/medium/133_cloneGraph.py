@@ -24,30 +24,33 @@ def clone_graph(node: Node) -> Node:
     # A dict of real:clone
     cloned_nodes = {}
 
-    def clone(n: Node) -> Node:
+    def clone(real_node: Node) -> Node:
         """
         Given a real node, return the cloned version of it
         """
         # Have we already cloned this node? Return it!
-        if node in cloned_nodes:
-            return cloned_nodes[node]
+        if real_node in cloned_nodes:
+            return cloned_nodes[real_node]
 
         # Create the clone and stick it into our cloned_nodes dict
-        clone_node = Node(n.value)
-        cloned_nodes[node] = clone_node
+        clone_node = Node(real_node.value)
+        cloned_nodes[real_node] = clone_node
 
         # Populate each of the clone's clone neighbors, using recursion
-        for neighbor in n.neighbors:
+        for neighbor in real_node.neighbors:
             clone_node.neighbors.append(clone(neighbor))
 
         return clone_node
 
-
-
-
     return clone(node)
 
 
+"""
+        1  ---  2
+        |       |
+        3  ---  4
+        
+"""
 n1 = Node(1)
 n2 = Node(2)
 n3 = Node(3)
@@ -60,3 +63,6 @@ n4.neighbors = [n1, n3]
 
 ans = clone_graph(n1)
 print(ans)
+"""
+1 is adjacent to 3 and 2
+"""
