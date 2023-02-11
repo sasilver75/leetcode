@@ -261,7 +261,7 @@ def neetcode_rotate(matrix: list[list[int]]) -> list[list[int]]:
             # move BottomLeft into TopLeft
             matrix[top][left + i] = matrix[bottom - i][left]
 
-            # move bottomRight into topLeft
+            # move bottomRight into bottomLeft
             matrix[bottom - i][left] = matrix[bottom][right - i]
 
             # move topRight into bottomRight
