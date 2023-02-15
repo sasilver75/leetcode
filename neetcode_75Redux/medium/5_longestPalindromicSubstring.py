@@ -51,7 +51,40 @@ It might make sense to have a single expand_window function that, given a valid
 palindromic window, expands the window while possible.
 """
 def lps(s: str) -> str:
-    pass
+    longest_palindromic_substring = ""
+
+    def expand_window(l: int, r: int) -> str:
+        """
+        Given a window of s[l:r+1] specifying a confirmed, palindromic substring
+        expand that window into larger palindromic substrings while possible.
+        Return the largest palindromic substring
+        """
+        # Base Case: We have no remaining space to further expand the palindrome window
+        # Alternatively/or we DO have the space, but the expanded window would not be palindromic
+        if l == 0 or r ==   len(s) - 1 or s[l-1] != s[r+1]:
+            return s[l:r+1]
+
+        # Expand the window if it would be a valid palindrome
+        return expand_window(l-1, r+1)
+
+    # Assess Odd-Lenghted Palindromic Substrings
+    for idx, char in enumerate(s):
+        palindromic_substring = expand_window(idx, idx)
+        if len(palindromic_substring) > len(longest_palindromic_substring):
+            longest_palindromic_substring = palindromic_substring
+
+    # Assess Even-Lengthed Palindromic Substrings
+    for idx in range(len(s) - 1):
+        if s[idx] == s[idx+1]:
+            palindromic_substring = expand_window(idx, idx+1)
+        if len(palindromic_substring) > len(longest_palindromic_substring):
+            longest_palindromic_substring = palindromic_substring
+
+    return longest_palindromic_substring
+
+
+
+
 
 
 
@@ -60,4 +93,4 @@ def test(fn):
     assert fn("cbbd") == "bb"
 
 test(lps_naive)
-# test(lps)
+test(lps)
