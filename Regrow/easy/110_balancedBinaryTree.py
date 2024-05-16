@@ -17,7 +17,8 @@ class Node:
 
 def is_balanced(root: Node):
 
-    def helper(root: Optional[Node], height: int):
+    def helper(root: Optional[Node], height: int): 
+        """ This seems to find the maximum height of a subtree"""
         if not root:
             return height
         return max(helper(root.left, height+1), helper(root.right, height+1))
